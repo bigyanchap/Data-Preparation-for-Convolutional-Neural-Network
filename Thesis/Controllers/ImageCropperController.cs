@@ -42,7 +42,7 @@ namespace Thesis.Controllers
                         var sourceFileFullPath = files[i];
                         var cropArea = new Rectangle(24, 94, 1521, 676);
                         var croppedImageBmp = cropImage(sourceFileFullPath,cropArea);
-                        var destFileFullPath = System.IO.Path.Combine(_destLocation, "slide"+(i+1));
+                        var destFileFullPath = System.IO.Path.Combine(_destLocation, "slide"+(i+1)+".png");
                         croppedImageBmp.Save(destFileFullPath, ImageFormat.Png);
                     }
                 }
