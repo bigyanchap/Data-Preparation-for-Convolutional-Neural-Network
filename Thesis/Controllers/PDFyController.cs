@@ -44,7 +44,7 @@ namespace Thesis.Controllers
                     Stream streamToWriteTo = System.IO.File.Open(destFullPathAndFileName, FileMode.Create);
                     await memStream.CopyToAsync(streamToWriteTo);
                 }
-                return Ok(new { Success = true, Message = "Images Crop Done Successfully." });
+                return Ok(new { Success = true, Message = "Images converted to PDF file Successfully." });
             }
             catch (Exception ex)
             {

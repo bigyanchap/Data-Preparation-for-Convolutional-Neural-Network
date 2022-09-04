@@ -46,7 +46,7 @@ namespace Thesis.Controllers
                         croppedImageBmp.Save(destFileFullPath, ImageFormat.Png);
                     }
                 }
-                return Ok(new { Success = true, Message = "Images converted to PDF file Successfully." });
+                return Ok(new { Success = true, Message = "Images Crop Done Successfully." });
             }
             catch (Exception ex)
             {
