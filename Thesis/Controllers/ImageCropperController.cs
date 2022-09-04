@@ -40,7 +40,7 @@ namespace Thesis.Controllers
                     for (int i = 0; i < files.Length; i++)
                     {
                         var sourceFileFullPath = files[i];
-                        var cropArea = new Rectangle(24, 94, 1521, 676);
+                        var cropArea = new Rectangle(15, 100, 1500, 770);
                         var croppedImageBmp = cropImage(sourceFileFullPath,cropArea);
                         var destFileFullPath = System.IO.Path.Combine(_destLocation, "slide"+(i+1)+".png");
                         croppedImageBmp.Save(destFileFullPath, ImageFormat.Png);
@@ -61,7 +61,6 @@ namespace Thesis.Controllers
 
         private static Bitmap cropImage(string path, Rectangle cropArea)
         {
-            
             Bitmap bmpImage = (Bitmap)Bitmap.FromFile(path);
             return bmpImage.Clone(cropArea,bmpImage.PixelFormat);
         }
